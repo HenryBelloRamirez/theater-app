@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff1744"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingTop="16dp"
+                android:src="@drawable/starimage" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Regals Cinema"
+                android:textColor="#fff157"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingTop="16dp"
+                android:src="@drawable/starimage" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#212121"
+            android:scaleType="centerInside"
+            android:src="@drawable/popcornimage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                style="@style/TextViewHeaderTheme"
+                android:layout_gravity="center_horizontal"
+                android:text="Menu" />
+
+            <TextView
+                style="@style/MenuItemTheme"
+                android:text="$5 per popcorn tub" />
+
+            <TextView
+                style="@style/MenuItemTheme"
+                android:text="$3 per soda" />
+
+            <TextView
+                style="@style/MenuItemTheme"
+                android:text="$2 butter topping" />
+
+            <TextView
+                style="@style/MenuItemTheme"
+                android:text="$1 jalapenos topping" />
+
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/TextViewHeaderTheme"
+            android:text="Name for this Order:" />
+
+        <EditText
+            android:id="@+id/name_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="textCapWords"
+            android:textColor="#212121"
+            android:textSize="20sp" />
+
+        <TextView
+            style="@style/TextViewHeaderTheme"
+            android:text="Popcorn" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp">
+
+            <Button
+                android:id="@+id/popcorn_decrement_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/popcorn_quantity_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:text="0"
+                android:textColor="#212121"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/popcorn_increment_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+" />
+
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewHeaderTheme"
+            android:text="Toppings" />
+
+        <CheckBox
+            android:id="@+id/butter_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:buttonTint="#fff157"
+            android:paddingLeft="24dp"
+            android:text="Butter"
+            android:textColor="#212121"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/jalapenos_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:buttonTint="#fff157"
+            android:paddingLeft="24dp"
+            android:text="Jalapenos"
+            android:textColor="#212121"
+            android:textSize="20sp" />
+
+        <TextView
+            style="@style/TextViewHeaderTheme"
+            android:text="Soda" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp">
+
+            <Button
+                android:id="@+id/soda_decrement_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/soda_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:text="0"
+                android:textColor="#212121"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/soda_increment_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewHeaderTheme"
+            android:text="Order Summary"/>
+
+        <TextView
+            android:id="@+id/order_summary_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#fff157"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Waiting for order to be submitted..."
+            android:textColor="#212121"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/submit_order_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Submit Order" />
+
+        <Button
+            android:id="@+id/submit_order_button_via_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Submit Order Via Email" />
+
+    </LinearLayout>
+
+
+</ScrollView>
